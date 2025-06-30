@@ -1,0 +1,58 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cyclonev
+Quartus root          :  /home/gabriel-lucas/intelFPGA_lite/21.1/quartus/linux64/
+Quartus sim root      :  /home/gabriel-lucas/intelFPGA_lite/21.1/quartus/eda/sim_lib
+Simulation Tool       :  questa intel fpga
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  RISCV_SingleCycle.vo
+Sim SDF file          :  RISCV_SingleCycle__verilog.sdo
+Sim dir               :  simulation/modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with Questa Intel FPGA software
+Sourced NativeLink script /home/gabriel-lucas/intelFPGA_lite/21.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File RISCV_SingleCycle_run_msim_gate_verilog.do already exists - backing up current file as RISCV_SingleCycle_run_msim_gate_verilog.do.bak4
+Probing transcript
+Questa Intel FPGA Info: # //  Questa Intel Starter FPGA Edition-64
+Questa Intel FPGA Info: # //  Version 2021.2 linux_x86_64 Apr 14 2021
+Questa Intel FPGA Info: # //
+Questa Intel FPGA Info: # //  Copyright 1991-2021 Mentor Graphics Corporation
+Questa Intel FPGA Info: # //  All Rights Reserved.
+Questa Intel FPGA Info: # //
+Questa Intel FPGA Info: # //  QuestaSim and its associated documentation contain trade
+Questa Intel FPGA Info: # //  secrets and commercial or financial information that are the property of
+Questa Intel FPGA Info: # //  Mentor Graphics Corporation and are privileged, confidential,
+Questa Intel FPGA Info: # //  and exempt from disclosure under the Freedom of Information Act,
+Questa Intel FPGA Info: # //  5 U.S.C. Section 552. Furthermore, this information
+Questa Intel FPGA Info: # //  is prohibited from disclosure under the Trade Secrets Act,
+Questa Intel FPGA Info: # //  18 U.S.C. Section 1905.
+Questa Intel FPGA Info: # //
+Questa Intel FPGA Info: # do RISCV_SingleCycle_run_msim_gate_verilog.do
+Questa Intel FPGA Info: # if {[file exists gate_work]} {
+Questa Intel FPGA Info: # 	vdel -lib gate_work -all
+Questa Intel FPGA Info: # }
+Questa Intel FPGA Info: # vlib gate_work
+Questa Intel FPGA Info: # vmap work gate_work
+Questa Intel FPGA Info: # Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+Questa Intel FPGA Info: # vmap work gate_work 
+Questa Intel FPGA Info: # Copying /home/gabriel-lucas/intelFPGA_lite/21.1/questa_fse/linux_x86_64/../modelsim.ini to modelsim.ini
+Questa Intel FPGA Info: # Modifying modelsim.ini
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # vlog -vlog01compat -work work +incdir+. {RISCV_SingleCycle.vo}
+Questa Intel FPGA Info: # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+Questa Intel FPGA Info: # Start time: 13:42:01 on Apr 18,2025
+Questa Intel FPGA Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." RISCV_SingleCycle.vo 
+Questa Intel FPGA Info: # -- Compiling module RISCV_TOP
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # Top level modules:
+Questa Intel FPGA Info: # 	RISCV_TOP
+Questa Intel FPGA Info: # End time: 13:42:01 on Apr 18,2025, Elapsed time: 0:00:00
+Questa Intel FPGA Info: # Errors: 0, Warnings: 0
+Questa Intel FPGA Info: # 
+Info: NativeLink simulation flow was successful
