@@ -4,4 +4,4 @@
 - Os comandos "make" devem ser realizados dentro do diretório "RISCV_SingleCycle (Cópia)"
 - Há slides "Implementação ..." que explica o workflow e faz uma análise de um código em C que faz uma média sendo executado no core
 
-![Texto alternativo](RISCV_SingleCycle (Cópia)/Arquitetura_com_adicoes.png)
+![Texto alternativo](RISCV_SingleCycle (Cópia)/Arquitetura_com_adicoes.png.)
