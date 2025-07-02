@@ -1,7 +1,0 @@
-//The branch instruction operates by adding the PC with the 12 bits of the
-//instruction shifted left by 1 bit.
-//a 12-bit offset used to compute the branch target address relative to
-//the branch instruction address beq x1, x2, offset
-// To compute the branch target address, the branch datapath includes an immediate generation unit and an adder.
-
-module immediate_Generator (
