@@ -15,5 +15,7 @@
 - Há um script de instalação dessas ferramentas (menos o GNU riscv-toolchain)
 ```bash
 sudo chmod +x preinstall.sh
+```
 ```bash
 ./preinstall.sh
+```
