@@ -5,3 +5,13 @@
 - "Implementação RISCV em Verilog.pdf" explica o workflow e faz uma análise de um código em C que faz uma média sendo executado no core
 
 ![Texto alternativo](https://github.com/gabrielucascp14/RISCV-SingleCycle/blob/6c0a1652abde503abc3db2b124d26a0de18008a0/RISCV_SingleCycle%20(C%C3%B3pia)/Arquitetura_com_adicoes.png)
+
+# Pre-requisitos
+- Precisa ter instalado:
+  - [GNU riscv-toolchain](https://github.com/riscv-collab/riscv-gnu-toolchain)
+  - Icarus Verilog
+  - GTKWave
+  - Opcionais para visualização RTL: Yosys, Netlistsvg e Inkscape
+- Há um script de instalação dessas ferramentas (menos o GNU riscv-toolchain)
+`sudo chmod +x preinstall.sh`
+`./preinstall.sh`
