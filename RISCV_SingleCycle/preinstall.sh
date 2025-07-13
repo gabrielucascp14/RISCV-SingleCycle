@@ -1,19 +1,30 @@
 #!/bin/bash
 
 riscv32_cmd=riscv32-unknown-elf-gcc
-icarus_cmd=/usr/local/bin/iverilog
+icarus_cmd=/usr/bin/iverilog
 gtkwave_cmd=/usr/bin/gtkwave
 yosys_cmd=/usr/bin/yosys
-netlist_cmd=/usr/local/bin/netlistsvg
+netlist_cmd=/usr/bin/netlistsvg
 inkscape_cmd=/usr/bin/inkscape
 
 echo "Checando se possui o compilador riscv."
 
-if [[ -f "$HOME/riscv32/bin/$riscv32_cmd" || -f "/usr/bin/riscv32/bin/$riscv32_cmd" ]];
+if [[ -f "$HOME/riscv32/bin/$riscv32_cmd" || -f "/usr/bin/riscv32/bin/$riscv32_cmd" || -f "/opt/riscv32/bin/$riscv32_cmd" ]];
 then
 	echo "Compilador riscv32 instalado."
 else
 	echo "Precisa instalar compilador riscv-toolchain."
+    sudo apt update
+    sudo apt install autoconf automake autotools-dev curl python3 python3-pip \
+    libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo \
+    gperf libtool patchutils bc zlib1g-dev git libexpat1-dev
+    git clone --recursive https://github.com/riscv-collab/riscv-gnu-toolchain ~/riscv/riscv-gnu-toolchain
+    cd ~/riscv/riscv-gnu-toolchain
+    git submodule update --init --recursive
+    sudo ./configure --prefix=/opt/riscv32 --with-arch=rv32imac --with-abi=ilp32 --disable-linux
+    sudo make newlib
+    sudo echo 'export PATH=/opt/riscv32/bin:$PATH' >> ~/.bashrc
+    source ~/.bashrc
 fi
 
 echo "Checando se possui Icarus e GTKwave."
@@ -74,7 +85,7 @@ then
 else
         echo "Precisa instalar Netlistsvg."
         sudo apt update && sudo apt install nodejs npm
-	sudo apt install -g netlistsvg 
+	    sudo npm install -g netlistsvg 
 
 
         if [ $? -eq 0 ];
@@ -111,8 +122,8 @@ echo "---- Netlistsvg ----"
 netlistsvg --version
 echo "---- Inkscape ----"
 inkscape --version
-
-
+echo "---- riscv gnu  ----"
+riscv32-unknown-elf-gcc --version
 
 
 
