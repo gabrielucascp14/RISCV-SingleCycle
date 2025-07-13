@@ -4,7 +4,7 @@ riscv32_cmd=riscv32-unknown-elf-gcc
 icarus_cmd=/usr/bin/iverilog
 gtkwave_cmd=/usr/bin/gtkwave
 yosys_cmd=/usr/bin/yosys
-netlist_cmd=/usr/bin/netlistsvg
+netlist_cmd=/usr/local/bin/netlistsvg
 inkscape_cmd=/usr/bin/inkscape
 
 echo "Checando se possui o compilador riscv."
@@ -29,7 +29,7 @@ fi
 
 echo "Checando se possui Icarus e GTKwave."
 
-if [[ -f $icarus_cmd ]];
+if [[ -f $icarus_cmd || -f "/usr/local/bin/iverilog" ]];
 then
         echo "Icarus instalado."
 else
@@ -45,7 +45,7 @@ else
 
 fi
 
-if [[ -f $gtkwave_cmd ]];
+if [[ -f $gtkwave_cmd || -f "/usr/local/bin/gtkwave" ]];
 then
         echo "GTKWave instalado."
 else
@@ -63,7 +63,7 @@ fi
 
 echo "Checando se possui Yosys e Netlistsvg."
 
-if [[ -f $yosys_cmd ]];
+if [[ -f $yosys_cmd || -f "/usr/local/bin/yosys" ]];
 then
         echo "Yosys instalado."
 else
@@ -79,7 +79,7 @@ else
         fi 
 fi
 
-if [[ -f $netlist_cmd ]];
+if [[ -f $netlist_cmd || -f "/usr/local/bin/netlistsvg" ]];
 then
         echo "Netlistsvg instalado."
 else
@@ -96,7 +96,7 @@ else
         fi 
 fi
 
-if [[ -f $inkscape_cmd ]];
+if [[ -f $inkscape_cmd || -f "/usr/local/bin/inkscape" ]];
 then
         echo "Inkscape instalado."
 else
