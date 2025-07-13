@@ -21,7 +21,7 @@ INK=inkscape
 # Arquivos de entrada
 LINKER=linker.ld
 CRT=crt0.s
-SRC=vetor.c
+SRC=fft2.c
 BASE=$(basename $(SRC))
 ELF=$(BASE).elf
 ASM=$(BASE).asm
@@ -51,7 +51,7 @@ all: $(ASM) $(INSTR_HEX) maybe_data_hex $(SIMLOG)
 
 # Compila o ELF
 $(ELF): $(LINKER) $(CRT) $(SRC)
-	$(GCC) -nostdlib -ffreestanding -O0 -T $(LINKER) $(CRT) $(SRC) -o $(ELF)
+	$(GCC) -nostdlib -march=rv32i -mabi=ilp32 -mno-relax -ffreestanding -O0 -T $(LINKER) $(CRT) $(SRC) -o $(ELF)
 
 # Dump do assembly
 $(ASM): $(ELF)
