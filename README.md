@@ -12,7 +12,7 @@
   - Icarus Verilog
   - GTKWave
   - Opcionais para visualização RTL: Yosys, Netlistsvg e Inkscape
-- Há um script de instalação dessas ferramentas
+- Há um script de instalação dessas ferramentas (a instalação do riscv gnu toolchain é demorada)
 ```bash
 sudo chmod +x preinstall.sh
 ```
