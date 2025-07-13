@@ -122,6 +122,20 @@ always @(*) begin
   ALUOp_out  = 2'b00; // Opcional: pode definir um código específico para jalr se precisar de ALU específica
   end
 
+      // U-type: LUI (Load Upper Immediate)
+    7'b0110111: begin  // LUI
+    ALUSrc    = 1;      // usa imediato (deslocado)
+    ALUSrc1   = 0;      // força o primeiro operando da ALU a ser zero (ou seu zero)
+    Mem_PC4_toReg = 2'b00; 
+    RegWrite  = 1;
+    MemRead   = 0;
+    MemWrite  = 0;
+    branch    = 0;
+    jump      = 0;
+    jalr      = 0;
+    ALUOp_out = 2'b00;  // operação ADD (somar imediato + zero)
+    end
+
     default: begin
       ALUSrc     = 0;
       ALUSrc1    = 0;
