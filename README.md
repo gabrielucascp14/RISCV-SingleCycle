@@ -13,6 +13,7 @@
   - GTKWave
   - Opcionais para visualização RTL: Yosys, Netlistsvg e Inkscape
 - Há um script de instalação dessas ferramentas (a instalação do riscv gnu toolchain é demorada)
+- Comandos para distribuições baseadas em Ubuntu (fazer equivalência para outras distros)
 ```bash
 sudo chmod +x preinstall.sh
 ```
