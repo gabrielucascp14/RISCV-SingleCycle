@@ -8,7 +8,7 @@
 
 # Pre-requisitos
 - Precisa ter instalado:
-  - [GNU riscv-toolchain versão 32 bits](https://github.com/riscv-collab/riscv-gnu-toolchain)
+  - [GNU riscv-toolchain versão 32 bits bare metal](https://github.com/riscv-collab/riscv-gnu-toolchain)
   - Icarus Verilog
   - GTKWave
   - Opcionais para visualização RTL: Yosys, Netlistsvg e Inkscape
